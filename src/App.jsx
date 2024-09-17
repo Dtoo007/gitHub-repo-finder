@@ -86,7 +86,7 @@ function App() {
       <option value="PHP">PHP</option> 
       </select>
 
-          {repo && (
+          {repo && !error && (
             <div key={repo.id} className="repo-card">
               <h3>{repo.name}</h3>
               <p>{repo.description}</p>
@@ -103,7 +103,7 @@ function App() {
         {isLoading && !hasFetched && <Loading/>}
         {error && <Error message={error}/>}
 
-      {!error ? (<Button  onClick={handleFetchRepo} disabled={language === '' || isLoading ? isActive : !isActive} className='btn-refresh'>Fetch Repository</Button>) : <Button className='btn-err' onClick={handleFetchRepo}>Click to retry</Button>}
+      {!error ? (<Button  onClick={handleFetchRepo} disabled={language === '' || isLoading ? isActive : !isActive} className='btn-refresh'>Fetch Repository</Button>) : <Button className='btn-err' onClick={handleFetchRepo}>Cli to retry</Button>}
     </div>
   )
 }
