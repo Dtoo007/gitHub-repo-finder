@@ -103,7 +103,7 @@ function App() {
         {isLoading && !hasFetched && <Loading/>}
         {error && <Error message={error}/>}
 
-      {!error ? (<Button  onClick={handleFetchRepo} disabled={language === '' || isLoading ? isActive : !isActive} className='btn-refresh'>Fetch Repository</Button>) : <Button className='btn-err' onClick={handleFetchRepo}>Cli to retry</Button>}
+      {!error ? (<Button  onClick={handleFetchRepo} disabled={language === '' || isLoading ? isActive : !isActive} className='btn-refresh'>Refresh</Button>) : <Button className='btn-err' onClick={handleFetchRepo}>Cli to retry</Button>}
     </div>
   )
 }
